@@ -202,3 +202,219 @@ h2 {
     font-weight: normal;
     text-decoration:underline;
 }
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+
+/* ===== TABLET / iPad ===== */
+
+@media (max-width: 1024px) {
+
+    #header {
+
+        top: 5%;
+
+        padding: 18px 30px;
+
+        gap: 15px;
+    }
+
+    .logo {
+
+        width: 70px;
+        height: 70px;
+    }
+
+    #header h1 {
+
+        font-size: 2.8rem;
+    }
+
+    #platform {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 40px;
+
+        padding-top: 180px;
+    }
+
+    #codeforces img,
+    #beecrowed img,
+    #codechef img {
+
+        width: 280px;
+    }
+
+    #social-links {
+
+        top: auto;
+
+        bottom: 30px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .social-card {
+
+        width: 220px;
+    }
+}
+
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    body {
+
+        overflow-y: auto;
+    }
+
+    #header {
+
+        width: 92%;
+
+        top: 3%;
+
+        padding: 15px 20px;
+
+        gap: 12px;
+
+        border-radius: 18px;
+    }
+
+    .logo {
+
+        width: 55px;
+        height: 55px;
+
+        padding: 6px;
+    }
+
+    #header h1 {
+
+        font-size: 2rem;
+
+        letter-spacing: 1px;
+    }
+
+    #platform {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 35px;
+
+        padding-top: 180px;
+
+        height: auto;
+
+        padding-bottom: 180px;
+    }
+
+    #codeforces img,
+    #beecrowed img,
+    #codechef img {
+
+        width: 250px;
+
+        max-width: 85vw;
+    }
+
+    #social-links {
+
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        transform: none;
+
+        margin-top: 40px;
+
+        margin-bottom: 40px;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    .social-card {
+
+        width: 260px;
+
+        padding: 15px 20px;
+    }
+
+    .social-card p {
+
+        font-size: 1.1rem;
+    }
+
+    .social-card span {
+
+        font-size: 1.5rem;
+    }
+
+    #owner {
+
+        top: 15px;
+        right: 15px;
+
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* ===== SMALL MOBILE ===== */
+
+@media (max-width: 480px) {
+
+    #header {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 18px;
+    }
+
+    #header h1 {
+
+        font-size: 1.8rem;
+    }
+
+    .logo {
+
+        width: 50px;
+        height: 50px;
+    }
+
+    #codeforces img,
+    #beecrowed img,
+    #codechef img {
+
+        width: 220px;
+    }
+
+    .social-card {
+
+        width: 90%;
+    }
+
+}
