@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    overflow: hidden; 
+}
+
+body {
+   
+    background: linear-gradient(135deg, #e8f0fe 0%, #dce4eb 100%);
+    
+    /* Option 2: Jodi apnar halka blue & purple er mix pochondo hoy, tahole uporer ta kete nicher line ta use korte paren */
+    /* background: linear-gradient(135deg, #edf2f8 0%, #dce3f1 50%, #e2dcf1 100%); */
+
+    color: #334155; 
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* --- THE MOVING BACKGROUND CONTAINER --- */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Puts the network safely behind everything else */
+}
+
+/* --- OWNER TEXT --- */
+#owner {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    padding: 10px;
+    color: #2c3e50; /* Dark grey for visibility on white */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 10;
+}
+
+/* --- HEADER STYLING --- */
+/* --- HEADER STYLING --- */
+/* ===== HEADER ===== */
+#header {
+    position: absolute;
+
+    /* beecrowd er upore center e */
+    top: 8%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 22px 40px;
+
+    border-radius: 25px;
+
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    /* 3D Shadow */
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15),
+        inset 0 2px 5px rgba(255,255,255,0.4);
+
+    z-index: 100;
+}
+
+
+/* ===== LOGO ===== */
+.logo {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.25);
+
+    padding: 10px;
+
+    /* Glow */
+    box-shadow:
+        0 0 15px rgba(0, 140, 255, 0.5),
+        0 0 30px rgba(0, 140, 255, 0.3);
+
+    transition: 0.4s ease;
+}
+
+/* Hover effect */
+.logo:hover {
+    transform: scale(1.08) rotate(-3deg);
+
+    box-shadow:
+        0 0 25px rgba(0, 140, 255, 0.8),
+        0 0 45px rgba(0, 140, 255, 0.5);
+}
+
+
+/* ===== TITLE ===== */
+#header h1 {
+
+    font-size: 4rem;
+
+    font-weight: 800;
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    letter-spacing: 2px;
+
+    /* Gradient Text */
+    background: linear-gradient(
+        90deg,
+        #0f172a,
+        #2563eb,
+        #38bdf8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Glow */
+    text-shadow:
+        0 0 10px rgba(59,130,246,0.5),
+        0 0 25px rgba(59,130,246,0.3);
+
+    transition: 0.4s ease;
+}
+
+/* Hover Text */
+#header h1:hover {
+
+    transform: scale(1.03);
+
+    text-shadow:
+        0 0 15px rgba(59,130,246,0.8),
+        0 0 35px rgba(59,130,246,0.5);
+}
+#header h1 {
+    font-size: 1.8rem;
+}
+
+/* --- PLATFORM LOGOS LAYOUT --- */
+#platform {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100%;
+    padding: 0 5vw; 
+}
+
+/* Updated backgrounds for the links/images */
+#codeforces a, 
+#beecrowed a,
+#codechef a {
+    display: block; /* Ensures the anchor tag wraps the image properly */
+}
+
+#codeforces img, 
+#beecrowed img {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(34, 56, 89, 0.15); 
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: contain;
+}
+
+#codechef img {
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+#codeforces img:hover, 
+#beecrowed img:hover, 
+#codechef img:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(34, 56, 89, 0.25);
+}
+/* ===== SOCIAL LINKS AREA ===== */
+
+#social-links {
+
+    position: absolute;
+
+    top: 75%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 30px;
+
+    z-index: 100;
+}
+
+
+/* ===== CARD ===== */
+
+.social-card {
+
+    width: 200px;
+
+    padding: 18px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(15px);
+
+    background: rgba(255,255,255,0.18);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.12),
+        inset 0 2px 4px rgba(255,255,255,0.35);
+
+    transition: 0.4s ease;
+}
+
+
+/* Hover Animation */
+
+.social-card:hover {
+
+    transform: translateY(-8px) scale(1.04);
+
+}
+
+
+/* Icon */
+
+.social-card span {
+
+    font-size: 2rem;
+
+    font-weight: bold;
+
+}
+
+
+/* Text */
+
+.social-card p {
+
+    margin: 0;
+
+    font-size: 1.3rem;
+
+    font-weight: 700;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+/* ===== YOUTUBE ===== */
+
+.youtube {
+
+    color: #ff0000;
+
+    box-shadow:
+        0 0 15px rgba(255,0,0,0.25),
+        0 0 30px rgba(255,0,0,0.1);
+
+}
+
+.youtube:hover {
+
+    box-shadow:
+        0 0 25px rgba(255,0,0,0.5),
+        0 0 50px rgba(255,0,0,0.2);
+
+}
+
+
+/* ===== FACEBOOK ===== */
+
+.facebook {
+
+    color: #1877f2;
+
+    box-shadow:
+        0 0 15px rgba(24,119,242,0.25),
+        0 0 30px rgba(24,119,242,0.1);
+
+}
+
+.facebook:hover {
+
+    box-shadow:
+        0 0 25px rgba(24,119,242,0.5),
+        0 0 50px rgba(24,119,242,0.2);
+
+}
